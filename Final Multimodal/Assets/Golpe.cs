@@ -42,7 +42,7 @@ public class Golpe : MonoBehaviour
     {
         if(c.tag == "pelota")
         {
-            is_triggered = true;
+            is_triggered = true;           
         }
     }
 

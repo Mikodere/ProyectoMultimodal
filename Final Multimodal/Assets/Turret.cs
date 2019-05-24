@@ -27,6 +27,6 @@ public class Turret : MonoBehaviour
     {
         GameObject Bala = (GameObject)Instantiate(municion, salida.position, salida.rotation);
         Bala.transform.forward = salida.forward;
-
+        //Bala.transform.SetParent(salida);
     }
 }
