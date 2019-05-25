@@ -22,17 +22,6 @@ public class Contador : MonoBehaviour
     void onTriggerEnter(Collider other)
     {
         count++;
-        countText.text = count.ToString()
-    }
-    void SetCountText()
-    {
-        if (countText.text != null)
-        {
-            countText.text = "Count: " + count.ToString();
-        }
-        if (count >= 12)
-        {
-            winText.text = "You Win!";
-        }
+        countText.text = count.ToString();
     }
 }
