@@ -19,9 +19,13 @@ public class Contador : MonoBehaviour
     {
 
     }
-    void onTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision other)
     {
-        count++;
-        countText.text = count.ToString();
+        Debug.Log("Collide!");
+        if(other.collider.tag == "pelota")
+        {
+            count++;
+            countText.text = "Puntos: " + count.ToString();
+        }
     }
 }
