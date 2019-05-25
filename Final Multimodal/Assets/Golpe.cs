@@ -29,11 +29,17 @@ public class Golpe : MonoBehaviour
 
             if (Physics.Raycast(rayo, out hit))
             {
-                if(hit.rigidbody != null && is_triggered == true)
+                Municion bola = hit.collider.GetComponent<Municion>();
+                if(bola != null)
                 {
-                    Debug.Log("Hit!" + velocidad);
-                    hit.rigidbody.AddForceAtPosition(dir.normalized*10f, hit.point, ForceMode.Impulse);
+                    if (hit.rigidbody != null && is_triggered == true && bola.ifHit == false)
+                    {
+                        Debug.Log("Hit!" + velocidad);
+                        hit.transform.SendMessageUpwards("Golpeado");
+                        hit.rigidbody.AddForceAtPosition(dir.normalized * 10f, hit.point, ForceMode.Impulse);
+                    }
                 }
+                
             }
         }
     }

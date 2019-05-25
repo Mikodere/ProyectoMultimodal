@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - pelota
+  - ShowOnPause
+  - ShowOnFinish
   layers:
   - Default
   - TransparentFX
