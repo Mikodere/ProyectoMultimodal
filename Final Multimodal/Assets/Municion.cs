@@ -4,9 +4,8 @@ using System.Collections;
 public class Municion : MonoBehaviour
 {
     public float velocidad;
-    public float ToLife = 2;
-
     public bool ifHit = false;
+    public bool dest = false;
 
     void Start()
     {
@@ -15,7 +14,11 @@ public class Municion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameObject.Destroy(gameObject, ToLife);
+        if (dest)
+        {
+            GameObject.Destroy(gameObject, 0);
+
+        }
         // transform.position += transform.forward * velocidad * Time.deltaTime;
     }
 

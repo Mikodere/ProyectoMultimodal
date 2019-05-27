@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
-    public float fireRate = 1f;
-    private float fireCountdown = 0f;
+    public bool activate = true;
     private Vector3  Rand;
 
     public GameObject municion;
@@ -15,13 +14,12 @@ public class Turret : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (fireCountdown <= 0f)
+        if (activate == true)
         {
             Disparar();
-            fireCountdown = 1f / fireRate;
+            activate = false;
         }
 
-        fireCountdown -= Time.deltaTime;
         
     }
     void Disparar()
