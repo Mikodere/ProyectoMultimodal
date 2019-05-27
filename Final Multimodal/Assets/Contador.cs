@@ -8,6 +8,9 @@ public class Contador : MonoBehaviour
     private int count;
     public Text countText;
 
+    private Vector3 dir;
+    public Transform target;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +20,7 @@ public class Contador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
     void OnCollisionEnter(Collision other)
     {
@@ -26,6 +29,10 @@ public class Contador : MonoBehaviour
         {
             count++;
             countText.text = "Puntos: " + count.ToString();
+
+            //devolver la bola al punto central
+            dir = target.position - other.transform.position;
+            other.rigidbody.AddForceAtPosition(dir.normalized , other.transform.position, ForceMode.Impulse);
         }
     }
 }

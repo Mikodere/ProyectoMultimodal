@@ -1869,12 +1869,12 @@ PrefabInstance:
     - target: {fileID: 3274525625684418328, guid: c17c1d391afc3b448aa7ff8ec8a561d5,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3274525625684418328, guid: c17c1d391afc3b448aa7ff8ec8a561d5,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3274525625684418328, guid: c17c1d391afc3b448aa7ff8ec8a561d5,
         type: 3}
@@ -2103,6 +2103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countText: {fileID: 2123624598}
+  target: {fileID: 2065460064}
 --- !u!1 &2093498632
 GameObject:
   m_ObjectHideFlags: 0

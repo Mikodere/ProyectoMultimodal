@@ -22,7 +22,7 @@ public class Municion : MonoBehaviour
     void Golpeado()
     {
         Debug.Log("Golpeado!");
-        ifHit = true;
+        //ifHit = true;
     }
 
 }

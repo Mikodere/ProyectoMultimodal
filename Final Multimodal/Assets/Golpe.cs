@@ -25,7 +25,7 @@ public class Golpe : MonoBehaviour
             Debug.DrawRay(rayo.origin, rayo.direction * 10, Color.yellow);
 
             dir = new Vector3(-rayo.direction.x, -rayo.direction.y, rayo.direction.z);
-            velocidad = Input.acceleration.z;
+            velocidad =  -Input.acceleration.y * 10;
 
             if (Physics.Raycast(rayo, out hit))
             {
@@ -36,7 +36,7 @@ public class Golpe : MonoBehaviour
                     {
                         Debug.Log("Hit!" + velocidad);
                         hit.transform.SendMessageUpwards("Golpeado");
-                        hit.rigidbody.AddForceAtPosition(dir.normalized * 10f, hit.point, ForceMode.Impulse);
+                        hit.rigidbody.AddForceAtPosition(dir.normalized * (6.0f + velocidad), hit.point, ForceMode.Impulse);
                     }
                 }
                 

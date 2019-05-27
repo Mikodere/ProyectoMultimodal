@@ -6,6 +6,7 @@ public class Turret : MonoBehaviour
 {
     public float fireRate = 1f;
     private float fireCountdown = 0f;
+    private Vector3  Rand;
 
     public GameObject municion;
     public Transform salida;
@@ -21,11 +22,12 @@ public class Turret : MonoBehaviour
         }
 
         fireCountdown -= Time.deltaTime;
-
+        
     }
     void Disparar()
     {
-        GameObject Bala = (GameObject)Instantiate(municion, salida.position, salida.rotation);
+        Rand = new Vector3(Random.Range(-0.5f, 0.5f), 0.0f, 0.0f);
+        GameObject Bala = (GameObject)Instantiate(municion, salida.position + Rand, salida.rotation);
         Bala.transform.forward = salida.forward;
         //Bala.transform.SetParent(salida);
     }
