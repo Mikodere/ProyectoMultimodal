@@ -297,6 +297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 526479941}
   lanzar: {fileID: 1230558065}
+  intentos: 3
 --- !u!1 &429225687
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,6 +886,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 5.6351795
       objectReference: {fileID: 0}
+    - target: {fileID: 307031459028480173, guid: eb6d10e86cdb247e5bf6d48680885a95,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5483ab86f55154600a050b60e04c63b1, type: 2}
+    - target: {fileID: 307031459738241024, guid: eb6d10e86cdb247e5bf6d48680885a95,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3d64005b20c294c2a99a87a5ee605c78, type: 2}
     - target: {fileID: 307031459738241025, guid: eb6d10e86cdb247e5bf6d48680885a95,
         type: 3}
       propertyPath: m_IsTrigger
@@ -1859,6 +1870,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: "Ca\xF1on"
       objectReference: {fileID: 0}
+    - target: {fileID: 3274525625684418327, guid: c17c1d391afc3b448aa7ff8ec8a561d5,
+        type: 3}
+      propertyPath: municion
+      value: 
+      objectReference: {fileID: 3989897057233339449, guid: cb837f547e51fb14ab1c7ca4dfb87834,
+        type: 3}
+    - target: {fileID: 3274525625684418327, guid: c17c1d391afc3b448aa7ff8ec8a561d5,
+        type: 3}
+      propertyPath: fireRate
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 3274525625684418328, guid: c17c1d391afc3b448aa7ff8ec8a561d5,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1933,17 +1955,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3274525625684418327, guid: c17c1d391afc3b448aa7ff8ec8a561d5,
-        type: 3}
-      propertyPath: municion
-      value: 
-      objectReference: {fileID: 3989897057233339449, guid: cb837f547e51fb14ab1c7ca4dfb87834,
-        type: 3}
-    - target: {fileID: 3274525625684418327, guid: c17c1d391afc3b448aa7ff8ec8a561d5,
-        type: 3}
-      propertyPath: fireRate
-      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 3274525625684022700, guid: c17c1d391afc3b448aa7ff8ec8a561d5,
         type: 3}
