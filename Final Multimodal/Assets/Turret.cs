@@ -27,6 +27,6 @@ public class Turret : MonoBehaviour
         Rand = new Vector3(Random.Range(-0.5f, 0.5f), 0.0f, 0.0f);
         GameObject Bala = (GameObject)Instantiate(municion, salida.position + Rand, salida.rotation);
         Bala.transform.forward = salida.forward;
-        //Bala.transform.SetParent(salida);
+        Bala.transform.parent = transform;
     }
 }

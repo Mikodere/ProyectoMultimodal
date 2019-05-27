@@ -6,6 +6,7 @@ using Vuforia;
 public class TogglePhysics : MonoBehaviour, ITrackableEventHandler
 {
     private TrackableBehaviour trackableBehaviour;
+    public UIManager manager;
 
     // Start is called before the first frame update
     void Start()
@@ -13,6 +14,8 @@ public class TogglePhysics : MonoBehaviour, ITrackableEventHandler
         trackableBehaviour = GetComponent<TrackableBehaviour>();
         if (trackableBehaviour)
             trackableBehaviour.RegisterTrackableEventHandler(this);
+
+        //Time.timeScale = 0;
     }
 
     public void OnTrackableStateChanged(TrackableBehaviour.Status previousStatus,
@@ -22,11 +25,15 @@ public class TogglePhysics : MonoBehaviour, ITrackableEventHandler
             newStatus == TrackableBehaviour.Status.TRACKED ||
             newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED)
         {
-            Physics.autoSimulation = true;
+            Time.timeScale = 1;
+            Debug.Log("Se ve!");
+            manager.HidePaused();
         }
         else
         {
-            Physics.autoSimulation = false;
+            Time.timeScale = 0;
+            Debug.Log("No se ve!");
+            manager.ShowPaused();
         }
     }
 }
