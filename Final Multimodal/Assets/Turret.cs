@@ -16,7 +16,7 @@ public class Turret : MonoBehaviour
     {
         if (activate == true)
         {
-            Disparar();
+            Invoke("Disparar", 3f);
             activate = false;
         }
 

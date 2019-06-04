@@ -36,7 +36,7 @@ public class Golpe : MonoBehaviour
                     {
                         Debug.Log("Hit!" + velocidad);
                         hit.transform.SendMessageUpwards("Golpeado");
-                        hit.rigidbody.AddForceAtPosition(dir.normalized * (6.0f + velocidad), hit.point, ForceMode.Impulse);
+                        hit.rigidbody.AddForceAtPosition(dir.normalized * (5.5f + velocidad), hit.point, ForceMode.Impulse);
                     }
                 }
                 
